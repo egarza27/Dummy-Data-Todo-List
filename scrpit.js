@@ -53,7 +53,7 @@ const filterNotComplete = (arr) => {
   populateTodos(filteredNotComplete);
 };
 
-const logTodos = () => {
+const logTodos = (arr) => {
   console.log(arrayOfTodos);
 };
 
