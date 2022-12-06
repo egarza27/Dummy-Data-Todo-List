@@ -34,29 +34,32 @@ const filterByUserId = (arr) => {
 };
 
 const filterComplete = (arr) => {
+  const todoList = document.getElementById("todo-list");
+  todoList.innerHTML = "";
   const filteredComplete = arr.filter((item) => {
     return item.completed === true;
   });
   console.log(filteredComplete);
-  arrayOfTodos = filteredComplete;
-  populateTodos(arr);
+  populateTodos(filteredComplete);
 };
 
 const filterNotComplete = (arr) => {
+  const todoList = document.getElementById("todo-list");
+  todoList.innerHTML = "";
   const filteredNotComplete = arr.filter((item) => {
     return item.completed === false;
   });
   console.log(filteredNotComplete);
-  arrayOfTodos = filteredNotComplete;
-  populateTodos(arr);
+  populateTodos(filteredNotComplete);
 };
 
 const logTodos = () => {
   console.log(arrayOfTodos);
 };
 
-const populateTodos = () => {
-  for (let i = 0; i < arrayOfTodos.length; i++) {
+const populateTodos = (arr) => {
+  document.getElementById("todo-list").innerHTML = "";
+  for (let i = 0; i < arr.length; i++) {
     const list = document.getElementById("todo-list");
     const task = document.createElement("li");
     task.appendChild(document.createTextNode(arrayOfTodos[i].title));
