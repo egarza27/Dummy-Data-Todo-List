@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <button onclick="fetchTodos()">Fetch Todos</button>
-    <button onclick="logTodos()">Log Todos</button>
-    <button onclick="populateTodos()">Populate Todos</button>
-    
+  </head>
+  <body onload="fetchTodos()">
+    <form id="form">
+      <label for="text">userId</label>
+      <input type="number" class="filter-input" id="userId" />
+      <button value="send" id="submit">Submit</button>
+    </form>
+
+    <br />
+
+    <!-- <button onclick="fetchTodos()">Fetch Todos</button> -->
+    <!-- <button onclick="logTodos()">Log Todos</button> -->
+    <button id="populate" onclick="populateTodos(arrayOfTodos)">
+      List of Todos
+    </button>
+    <button onclick="filterComplete(arrayOfTodos)">Completed Todos</button>
+    <button onclick="filterNotComplete(arrayOfTodos)">
+      Not Completed Todos
+    </button>
+
     <ol id="todo-list">
-    <!-- LIs will go here -->
+      <!-- LIs will go here -->
     </ol>
 
-<script src="scrpit.js"></script>
-</body>
+    <script src="scrpit.js"></script>
+  </body>
 </html>
