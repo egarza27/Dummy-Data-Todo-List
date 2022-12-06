@@ -34,8 +34,8 @@ const filterByUserId = (arr) => {
 };
 
 const filterComplete = (arr) => {
-  const todoList = document.getElementById("todo-list");
-  todoList.innerHTML = "";
+  const todoListComplete = document.getElementById("todo-list");
+  todoListComplete.innerHTML = "";
   const filteredComplete = arr.filter((item) => {
     return item.completed === true;
   });
@@ -44,8 +44,8 @@ const filterComplete = (arr) => {
 };
 
 const filterNotComplete = (arr) => {
-  const todoList = document.getElementById("todo-list");
-  todoList.innerHTML = "";
+  const todoListNotComplete = document.getElementById("todo-list");
+  todoListNotComplete.innerHTML = "";
   const filteredNotComplete = arr.filter((item) => {
     return item.completed === false;
   });
